@@ -1,0 +1,17 @@
+header {
+    width: 100%;
+    background-color: darkgray;
+    min-height: 55px;
+    border-bottom: 1px solid black;
+}
+
+body {
+    background-color: whitesmoke;
+  }
+
+section{
+    width: 100%;
+    background-color: lightgray;
+    min-height: 55px;
+    border-bottom: 1px solid black;
+}
