@@ -1,30 +1,26 @@
-// Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
+const here1 = "The First One";
+const here2 = "The Second One";
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+const http = require("http");
 
-// Creating express app and configuring middleware needed for authentication
-var app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+const PORT = 7000;
+const PORT2 = 7500;
 
-// Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+function handleRequest(request, response){
+    response.end(here1);
+}
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
+function handleRequest2(request, response){
+    response.end(here2);
+}
+
+const server = http.createServer(handleRequest);
+const server2 = http.createServer(handleRequest2);
+
+server.listen(PORT, () => {
+    console.log("Server is listening on http://localhost:" + PORT);
+});
+
+server2.listen(PORT2, () => {
+    console.log("Server is listening on http://localhost:" + PORT2);
 });
