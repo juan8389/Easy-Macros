@@ -15,3 +15,23 @@ section{
     min-height: 55px;
     border-bottom: 1px solid black;
 }
+h1{
+    inline-size: auto;
+    float: inline-start;
+}
+
+filter{
+    float: right;
+}
+
+.inline-block {
+    display: inline-block;
+    max-width: fit-content;
+    /* position:absolute; */
+   margin: 2%;
+}
+
+.footer-content {
+    border-top: 1px solid black;
+    max-width:none
+}
