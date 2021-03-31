@@ -35,3 +35,7 @@ filter{
     border-top: 1px solid black;
     max-width:none
 }
+form.signup,
+form.login {
+  margin-top: 50px;
+}
