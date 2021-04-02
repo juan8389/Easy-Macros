@@ -14,10 +14,10 @@ section{
     background-color: lightgray;
     min-height: 55px;
     border-bottom: 1px solid black;
+    
 }
-h1{
-    inline-size: auto;
-    float: inline-start;
+
+.filter-recipes{
 }
 
 filter{
@@ -34,4 +34,14 @@ filter{
 .footer-content {
     border-top: 1px solid black;
     max-width:none
+}
+
+.dropdown-btn{
+   width: 30px;
+   margin: auto;
+}
+
+
+h1{
+    padding: left 10px;
 }
