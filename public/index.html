@@ -7,68 +7,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Document</title>
   <link rel="stylesheet" href="./stylesheets/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="banner">
-    <!-- Container -->
-    <div class="container">
-      <!-- NavBar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Easy Macros</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Create an Account
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Sign up with Email</a>
-                <a class="dropdown-item" href="#">Sign up with Google</a>
-                <a class="dropdown-item" href="#">Sign up with Facebook</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Search -->
-        <form class="form-inline">
-          <input id="search_recipe" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button id="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Section -->
-  <section id="banner">
-    <h1>Filter Recipes</h1>
-    <div id="filterDropdown" class="filter">
-      <!-- Filter -->
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+ <!-- Header -->
+ <header class="banner">
+  <!-- Container -->
+<div class="container">
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#"><img src="../Assets/Easy Macros Logo.jpg"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Create an Account
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Sign up with Email</a>
+        <a class="dropdown-item" href="#">Sign up with Google</a>
+        <a class="dropdown-item" href="#">Sign up with Facebook</a>
       </div>
-    </div>
-  </section>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Login</a>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- Section -->
+<section id="banner"class="banner">
+<div class="btn-group dropright">
+<!-- Search -->
+<form class="form-inline">
+  <input id="search_recipe" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button id="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<button type="button" class="btn btn-outline-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Sort by
+</button>
+<div class="dropdown-menu">
+  <!-- Dropdown menu links -->
+  <a class="dropdown-item" href="#">Calories</a>
+  <a class="dropdown-item" href="#">Name</a>
+  <a class="dropdown-item" href="#">Random</a>
+</div>
+</div>
+
+</section>
   <!-- Recipes show up here -->
   <div id="img_macros">
     <div class="inline-block">
@@ -96,6 +91,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./js/api.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
