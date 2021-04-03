@@ -20,6 +20,7 @@ $(document).ready(function () {
           }
         }).then(function (response) {
           console.log(response);
+
           console.log(response.hits[0].recipe.image);
           console.log(response.hits[0].recipe.url);
           if (response) {
@@ -27,26 +28,15 @@ $(document).ready(function () {
               console.log(response.hits[0].recipe.digest[i].total);
             }
           }
-          var recipeImage = response.hits[0].recipe.image;
-          var recipeURL = response.hits[0].recipe.url;
-          var recipeMacros = response.hits[0].digest[i].total;
-          
-          console.log(recipeImage);
-          console.log(recipeURL);
-          console.log(recipeMacros);
-
-          var recipeDiv = $("<div>").addClass("col-lg mx-1");
-      recipeDiv.html(`
-      <div class="card text-white bg-primary" id="recipe1">
-          <div class="card-body">
-            <h5 class="recipe-image" id="recipe1">${recipeImage}</h5>
-            <div class="recipe-url"><b>URL: </b> ${recipeURL}
-            <div class="current-macros"><b>Macros: </b> ${recipeMacros[0]}g 
-        </div>
-      `);
-      
-
-        });
+         $("#recipe-macros").html(
+           "<b>Macros: <b/>" + "" + (Math.round(response.hits[0].recipe.digest[0].total)) + "g Fats<b/>" + " " +
+           (Math.round(response.hits[0].recipe.digest[1].total)) + "g Carbs<b/>" + " " +
+           (Math.round(response.hits[0].recipe.digest[2].total)) + "g Proteins<b/>"
+           ); 
+         
+ 
+       
+});
        
         
 
@@ -61,4 +51,5 @@ $(document).ready(function () {
 
   })
 })
+
 
