@@ -19,21 +19,24 @@ $(document).ready(function () {
             withCredentials: true
           }
         }).then(function (response) {
-          console.log(response);
-
+          console.log(response); 
           console.log(response.hits[0].recipe.image);
           console.log(response.hits[0].recipe.url);
+         
+
+         //not sure how to retrieve date from a loop. when i loop within the loop ¯\_(ツ)_/¯ git add
           if (response) {
             for (var i=0; i < 3; i++) {
-              console.log(response.hits[0].recipe.digest[i].total);
-            }
+              console.log(response.hits[i].recipe.digest[i].total);
+          }
           }
          $("#recipe-macros").html(
-           "<b>Macros: <b/>" + "" + (Math.round(response.hits[0].recipe.digest[0].total)) + "g Fats<b/>" + " " +
-           (Math.round(response.hits[0].recipe.digest[1].total)) + "g Carbs<b/>" + " " +
-           (Math.round(response.hits[0].recipe.digest[2].total)) + "g Proteins<b/>"
+           "<b>Macros: <b/>" + "" + (Math.round(response.hits[i].recipe.digest[0].total)) + "g Fats<b/>" + " " +
+           (Math.round(response.hits[i].recipe.digest[1].total)) + "g Carbs<b/>" + " " +
+           (Math.round(response.hits[i].recipe.digest[2].total)) + "g Proteins<b/>"
            ); 
-         
+
+        
  
        
 });
