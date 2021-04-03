@@ -37,9 +37,9 @@ $(document).ready(function () {
                 );
 
 
-                response.hits.forEach(function(item, index){
-                var image =`<img src="${item.recipe.image}" />`
-                $("#img_macros").append(image)
+                response.hits.forEach(function (item, index) {
+                    var image = `<img src="${item.recipe.image}" />`
+                    $("#img_macros").append(image)
                     console.log(item.recipe.image)
 
                 })
