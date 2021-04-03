@@ -9,12 +9,12 @@ body {
     background-color: whitesmoke;
   }
 
-section{
+.banner{
     width: 100%;
     background-color: lightgray;
     min-height: 55px;
     border-bottom: 1px solid black;
-    
+    padding-top: 7px;
 }
 
 .filter-recipes{
@@ -54,3 +54,4 @@ h1{
 a{
     padding-left: 50%;
 }
+
