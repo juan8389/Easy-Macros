@@ -20,6 +20,12 @@ $(document).ready(function () {
             }
           }).then(function (response) {
             console.log(response.hits[0].recipe.image);
+            if (response) {
+              for (var i=0; i < 3; i++) {
+                console.log(response.hits[0].recipe.digest[i].total);
+              }
+            }
+           
           });
 
     }
@@ -29,6 +35,8 @@ $(document).ready(function () {
         var query = $("#search_recipe").val();
         console.log(query)
         searchRecipe(query)
+        
 
     })
 })
+ 

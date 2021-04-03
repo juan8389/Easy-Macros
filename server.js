@@ -30,3 +30,7 @@ db.sequelize.sync().then(function () {
   });
 });
 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+
