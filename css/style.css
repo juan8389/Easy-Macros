@@ -45,3 +45,12 @@ filter{
 h1{
     padding: left 10px;
 }
+
+.form-inline{
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+a{
+    padding-left: 50%;
+}
