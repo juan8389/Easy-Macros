@@ -36,7 +36,7 @@ $(document).ready(function () {
                     (Math.round(response.hits[i].recipe.digest[2].total)) + "g Proteins<b/>"
                 );
 
-
+                    $("#img_macros").empty()
                 response.hits.forEach(function (item, index) {
                     var image = `<img src="${item.recipe.image}" />`
                     $("#img_macros").append(image)
@@ -56,9 +56,6 @@ $(document).ready(function () {
 
 
             }
-            // $("#img_macros").html(
-            //     "<b><b/>" + "" + (response.hits[0].recipe.image) + (response.hits[1].recipe.image) + (response.hits[2].recipe.image) + (response.hits[3].recipe.image) + (response.hits[4].recipe.image) + (response.hits[5].recipe.image) + (response.hits[6].recipe.image));
-
 
 
         });
