@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    background-color: darkgray;
+    min-height: 55px;
+    border-bottom: 1px solid black;
+}
+
+body {
+    background-color: whitesmoke;
+  }
+
+.banner{
+    width: 100%;
+    background-color: lightgray;
+    min-height: 55px;
+    border-bottom: 1px solid black;
+    padding-top: 7px;
+}
+
+.filter-recipes{
+}
+
+filter{
+    float: right;
+}
+
+.inline-block {
+    display: inline-block;
+    max-width: fit-content;
+    /* position:absolute; */
+   margin: 2%;
+}
+
+.footer-content {
+    border-top: 1px solid black;
+    max-width:none
+}
+
+.dropdown-btn{
+   width: 30px;
+   margin: auto;
+}
+
+
+h1{
+    padding: left 10px;
+}
+
+.form-inline{
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+a{
+    padding-left: 50%;
+}
+
+.container{
+    padding: 10px;
+}
